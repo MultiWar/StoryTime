@@ -1,14 +1,26 @@
+import { Box, Stack } from "@chakra-ui/layout"
+import isHotkey from "is-hotkey"
 import { useMemo, useState, useCallback, KeyboardEvent } from "react"
 import { createEditor, Descendant } from "slate"
+import { withHistory } from "slate-history"
 import { Editable, Slate, withReact } from 'slate-react'
 import { CustomElement } from "../../../slate"
-import { DefaultElement, HeadingElement, LinkElement } from './customElements'
-import { BoldLeaf } from "./customLeaves"
-import { toggleBoldMark } from "./helperFunctions"
-import { withHeadingShortcut } from "./plugins/withHeadingShortcut"
+import { DefaultElement, DividerElement, HeadingElement, QuoteElement } from './customElements'
+import { Leaf } from "./customLeaves"
+import { toggleMark } from "./helperFunctions"
+import { withDivider } from "./plugins/withDivider"
+import { Toolbar } from "./Toolbar"
+
+const HOTKEYS = {
+    'mod+b': 'bold',
+    'mod+i': 'italic',
+    'mod+u': 'underline',
+    'mod+`': 'code',
+    'mod+k': 'strikethrough'
+}
 
 export const MyEditor = () => {
-    const editor = useMemo(() => withHeadingShortcut(withReact(createEditor())), [])
+    const editor = useMemo(() => withDivider(withHistory(withReact(createEditor()))), [])
     const initialValue: CustomElement[] = [
         {
             type: 'paragraph',
@@ -21,54 +33,54 @@ export const MyEditor = () => {
         switch(props.element.type) {
             case 'heading':
                 return <HeadingElement {...props} />
-            case 'link':
-                return <LinkElement {...props} />
+            case 'quote':
+                return <QuoteElement {...props} />
+            case 'divider':
+                return <DividerElement {...props} />
             default:
                 return <DefaultElement {...props} />
         }
     }, [])
 
-    const renderLeaf = useCallback(props => {
-        return <BoldLeaf {...props}/>
-    }, [])
+    const renderLeaf = useCallback(props => <Leaf {...props} />, [])
 
     const handleEvents = (e: KeyboardEvent<HTMLDivElement>) => {
-        if(!e.ctrlKey) {
-            return
-        }
-
-        switch(e.key) {
-            case 'b':
+        for(const hotkey in HOTKEYS) {
+            if(isHotkey(hotkey, e as any)) {
                 e.preventDefault()
-                toggleBoldMark(editor)
-                break;
-            // case 'h':
-            //     e.preventDefault()
-            //     const [match] = Editor.nodes(editor, {
-            //         match: (n: any) => n.type === 'heading'
-            //     })
-            //     Transforms.setNodes(
-            //         editor, 
-            //         { type: match ? 'paragraph' : 'heading' },
-            //         { match: n => Editor.isBlock(editor, n) }
-            //     )
-            //     break;
-            default:
-                break;
+                const mark = HOTKEYS[hotkey]
+                toggleMark(editor, mark)
+            }
         }
     }
 
     return (
-        <Slate
-            editor={editor}
-            value={value}
-            onChange={v => setValue(v)}
+        <Box
+            bgColor='gray.800'
+            borderRadius='6'
+            borderWidth='2px'
+            borderColor='gray.900'
+            borderStyle='solid'
+            _focusWithin={{borderColor: 'brand.500', bgColor: 'gray.900'}}
         >
-            <Editable
-                renderElement={renderElement}
-                renderLeaf={renderLeaf}
-                onKeyDown={event => handleEvents(event)}
-            />
-        </Slate>
+            <Slate
+                editor={editor}
+                value={value}
+                onChange={v => setValue(v)}
+            >
+                <Stack>
+                    <Toolbar />
+                    <Box
+                        p={4}
+                    >
+                        <Editable
+                            renderElement={renderElement}
+                            renderLeaf={renderLeaf}
+                            onKeyDown={event => handleEvents(event)}
+                        />
+                    </Box>
+                </Stack>
+            </Slate>
+        </Box>
     )
 }

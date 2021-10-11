@@ -9,19 +9,22 @@ export type ParagraphElement = {
 }
 
 export type HeadingElement = {
-  type: 'heading',
-  level: 1 | 2 | 3,
+  type: 'heading-one',
   children: CustomText[]
 }
 
-export type LinkElement = {
-  type: 'link',
-  url: string,
+export type QuoteElement = {
+  type: 'quote',
   children: CustomText[]
 }
 
-export type CustomElement = ParagraphElement | HeadingElement | LinkElement
-export type FormattedText = { text: string, bold?: true,  }
+export type DividerELement = {
+  type: 'divider',
+  children: CustomText[]
+}
+
+export type CustomElement = ParagraphElement | HeadingElement | QuoteElement | DividerELement
+export type FormattedText = { text: string, bold?: true, italic?: true, code?: true, underline?: true, strikethrough?: true }
 export type CustomText = FormattedText
 
 declare module 'slate' {
