@@ -15,6 +15,8 @@ export const HeadingElement = props => {
             {...props.attributes} 
             size='lg'
             as='h3'
+            mt={5}
+            mb={3}
         >
             {props.children}
         </Heading>

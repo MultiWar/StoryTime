@@ -1,7 +1,7 @@
 import { MyEditor } from "./Editor"
 
-export const RichTextEditor = () => {
+export const RichTextEditor = ({ onChange, value }) => {
     return (
-        <MyEditor />
+        <MyEditor onChange={onChange} value={value} />
     )
 }

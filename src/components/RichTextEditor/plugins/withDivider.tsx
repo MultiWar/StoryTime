@@ -2,10 +2,10 @@ import { Editor, Path, Range, Text as SlateText, Transforms, Node as SlateNode }
 import { toggleBlock } from "../helperFunctions";
 
 export const withDivider = (editor: Editor) => {
-    const { insertBreak,  } = editor
+    const { insertBreak, isVoid } = editor
 
     editor.isVoid = element => {
-        return element.type === 'divider'
+        return element.type === 'divider' ? true : isVoid(element)
     }
 
     // if current selection is void node, insert a default node below

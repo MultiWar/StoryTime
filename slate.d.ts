@@ -24,7 +24,7 @@ export type DividerELement = {
 }
 
 export type CustomElement = ParagraphElement | HeadingElement | QuoteElement | DividerELement
-export type FormattedText = { text: string, bold?: true, italic?: true, code?: true, underline?: true, strikethrough?: true }
+export type FormattedText = { text: string, strong?: true, emphasis?: true, code?: true, underline?: true, strikethrough?: true, highlight?: true }
 export type CustomText = FormattedText
 
 declare module 'slate' {

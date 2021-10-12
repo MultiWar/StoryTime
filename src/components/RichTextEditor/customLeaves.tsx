@@ -1,11 +1,11 @@
 import { chakra } from "@chakra-ui/system"
 
 export const Leaf = ({ attributes, children, leaf }) => {
-    if(leaf.bold) {
+    if(leaf.strong) {
         children = <chakra.strong fontWeight='black'>{children}</chakra.strong>
     }
 
-    if(leaf.italic) {
+    if(leaf.emphasis) {
         children = <chakra.span as='em' fontStyle='italic'>{children}</chakra.span>
     }
 
@@ -19,6 +19,10 @@ export const Leaf = ({ attributes, children, leaf }) => {
 
     if(leaf.strikethrough) {
         children = <chakra.span as='s' textDecoration='line-through'>{children}</chakra.span>
+    }
+    
+    if(leaf.highlight) {
+        children = <chakra.mark backgroundColor='brand.600' color='gray.100'>{children}</chakra.mark>
     }
 
     return (

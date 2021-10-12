@@ -1,6 +1,6 @@
 import { Box, Stack } from "@chakra-ui/layout"
 import isHotkey from "is-hotkey"
-import { useMemo, useState, useCallback, KeyboardEvent } from "react"
+import { useMemo, useState, useCallback, KeyboardEvent, useEffect } from "react"
 import { createEditor, Descendant } from "slate"
 import { withHistory } from "slate-history"
 import { Editable, Slate, withReact } from 'slate-react'
@@ -9,25 +9,32 @@ import { DefaultElement, DividerElement, HeadingElement, QuoteElement } from './
 import { Leaf } from "./customLeaves"
 import { toggleMark } from "./helperFunctions"
 import { withDivider } from "./plugins/withDivider"
+import { withNormalizeLineBreak } from "./plugins/withNormalizeLineBreak"
 import { Toolbar } from "./Toolbar"
 
-const HOTKEYS = {
-    'mod+b': 'bold',
-    'mod+i': 'italic',
+export const HOTKEYS = {
+    'mod+b': 'strong',
+    'mod+i': 'emphasis',
     'mod+u': 'underline',
-    'mod+`': 'code',
-    'mod+k': 'strikethrough'
+    'mod+,': 'code',
+    'mod+k': 'strikethrough',
+    'mod+m': 'highlight'
 }
 
-export const MyEditor = () => {
-    const editor = useMemo(() => withDivider(withHistory(withReact(createEditor()))), [])
-    const initialValue: CustomElement[] = [
-        {
-            type: 'paragraph',
-            children: [{ text: 'A line of text in a paragraph.' }],
-        }
-    ]
-    const [value, setValue] = useState<Descendant[]>(initialValue)
+const initialValue: CustomElement[] = [
+    {
+        type: 'paragraph',
+        children: [{ text: 'A line of text in a paragraph.' }],
+    }
+]
+
+export const MyEditor = ({ onChange, value = initialValue }) => {
+    const editor = useMemo(() => withNormalizeLineBreak(withDivider(withHistory(withReact(createEditor())))), [])
+    // const [value, setValue] = useState<Descendant[]>(initialValue)
+
+    // useEffect(() => {
+    //     console.log(value)
+    // }, [value])
 
     const renderElement = useCallback(props => {
         switch(props.element.type) {
@@ -66,7 +73,7 @@ export const MyEditor = () => {
             <Slate
                 editor={editor}
                 value={value}
-                onChange={v => setValue(v)}
+                onChange={onChange}
             >
                 <Stack>
                     <Toolbar />
