@@ -40,7 +40,7 @@ export const MyEditor = ({ onChange, value = initialValue }) => {
         switch(props.element.type) {
             case 'heading':
                 return <HeadingElement {...props} />
-            case 'quote':
+            case 'blockquote':
                 return <QuoteElement {...props} />
             case 'divider':
                 return <DividerElement {...props} />

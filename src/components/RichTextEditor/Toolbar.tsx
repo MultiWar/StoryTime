@@ -8,14 +8,14 @@ import { BsDash } from 'react-icons/bs'
 export const Toolbar = () => {
     return (
         <HStack width='100%' bgColor='gray.700' borderRadius={6} spacing={2}>
-            <MarkButton format='bold' icon={<FaBold />} ariaLabel='bold selection' />
-            <MarkButton format='italic' icon={<FaItalic />} ariaLabel='italic selection' />
+            <MarkButton format='strong' icon={<FaBold />} ariaLabel='bold selection' />
+            <MarkButton format='emphasis' icon={<FaItalic />} ariaLabel='italic selection' />
             <MarkButton format='underline' icon={<FaUnderline />} ariaLabel='underline selection' />
             <MarkButton format='strikethrough' icon={<FaStrikethrough />} ariaLabel='strikethrough selection' />
             <MarkButton format='code' icon={<FaCode />} ariaLabel='turn selection into code' />
             <MarkButton format='highlight' icon={<FaHighlighter />} ariaLabel='highlight selection' />
             <BlockButton format='heading' icon={<FaHeading />} ariaLabel='turn selection into a Heading' />
-            <BlockButton format='quote' icon={<FaQuoteLeft />} ariaLabel='turn selection into a quote' />
+            <BlockButton format='blockquote' icon={<FaQuoteLeft />} ariaLabel='turn selection into a quote' />
             <BlockButton format='divider' icon={<BsDash />} ariaLabel='create divider' />
         </HStack>
     )

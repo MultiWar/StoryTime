@@ -14,7 +14,7 @@ export type HeadingElement = {
 }
 
 export type QuoteElement = {
-  type: 'quote',
+  type: 'blockquote',
   children: CustomText[]
 }
 
