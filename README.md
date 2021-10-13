@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# English
 
-## Getting Started
+## What is StoryTime?
+StoryTime is a platform for amateur (or otherwise) writers, where people will be able to share their stories and read what others have shared. It is being built with Next and Slate. The CMS chosen was DatoCMS. Login will be done with Twitter auth, probably. I also plan on including internationalization, so interfaces work on both Brazilian portuguese and english.
 
-First, run the development server:
+## Why those technologies?
+### Next
+Next was picked because it offers Incremental Static Regeneration, which is, to me, a core functionality of the platform, as, most of the time, users will probably be reading a simple text, which doesn't have to be generated every time, and can be served as static HTML with no problem. Not only that, but changes to the text are probably not going to be frequent. Aside from this feature, Next also has api routes, which make it quite easy to do stuff like social authentication. The fact that I was already familiar with it also weighted on the decision.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### DatoCMS
+I wanted a CMS so I could store content without using any database and even without having any backend whatsoever. I picked Dato because it provides a GraphQL API, which I like a lot and makes sense for the project, I liked their content modeling (including the Structured Text type of field, which I'll probably use for the main text of the chapters) and it seemed to have an easy integration with Next.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Slate
+As I wanted to use DatoCMS's Structured Text field, I also wanted a rich text editor that gave me a nice data structure. Not only that, but, as StoryTime already has a visual identity, I needed it to be flexible in how it looked. I also wanted it to be flexible on how it worked, so I could easily add whatever I felt was interesting and useful to writers. It took me some time to get used to working with it, but it delivered all of that.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Social Authentication, and why Twitter?
+As I said before, I didn't want to build a backend for this project, but I needed a way to authenticate my users, so social authentication was the best option. I picked Twitter because it seemed like the most fitting of all of them. It didn't have extra requirements, had some of the things I intend to store on my CMS and most people will probably already have a Twitter account anyway. I won't be doing any feed integration, though, at least for now.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Chakra UI
+I wanted something to speed up my design, and, knowing how easy it is to extend themes in Chakra and to build around their basic components, I had to use it. I tried creating my own little thing before deciding on it, and it was just too much work for what Chakra had already done, and done better, with built in accessibility concerns and a bunch of helpful components.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## How is it looking, though?
+Well, I'm glad you asked. Here are some screenshots:
 
-## Learn More
+### Home Page
+![Screenshot_1123](https://user-images.githubusercontent.com/54380823/137223768-90ed87f0-7917-4035-ac48-e60a09538d19.png)
+(there's 2 login related call to actions there, but that's a remnant of a previous age where social authentication wasn't the idea yet)
 
-To learn more about Next.js, take a look at the following resources:
+### All authors
+![Screenshot_1124](https://user-images.githubusercontent.com/54380823/137225998-56dc27a0-7be1-4b0c-8718-a4ee5c38157e.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### An author's page
+![Screenshot_1125](https://user-images.githubusercontent.com/54380823/137226040-e7e52532-e38c-4884-ba52-b0e0649f42bc.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### A story's page
+![Screenshot_1126](https://user-images.githubusercontent.com/54380823/137226582-e497fc54-cf05-4928-b91a-f3cdbce345de.png)
 
-## Deploy on Vercel
+The other 3 menu items aren't done yet, but they will probably be similar in appearance to the all authors page.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Rich Text Editor
+![Screenshot_1127](https://user-images.githubusercontent.com/54380823/137227398-95e5aa2b-6170-4d60-a699-3ac5f2bd36ec.png)
