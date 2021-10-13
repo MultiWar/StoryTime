@@ -39,3 +39,4 @@ The other 3 menu items aren't done yet, but they will probably be similar in app
 
 ### Rich Text Editor
 ![Screenshot_1127](https://user-images.githubusercontent.com/54380823/137227398-95e5aa2b-6170-4d60-a699-3ac5f2bd36ec.png)
+don't work very well together*
