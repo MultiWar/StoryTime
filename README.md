@@ -1,3 +1,29 @@
+# Table of Contents / Índice
+## [English](https://github.com/MultiWar/StoryTime/blob/main/README.md#english)
+* [What is StoryTime?](https://github.com/MultiWar/StoryTime/blob/main/README.md#what-is-storytime)
+* [Why these technologies?](https://github.com/MultiWar/StoryTime/blob/main/README.md#why-these-technologies)
+  * [TypeScript](https://github.com/MultiWar/StoryTime/blob/main/README.md#typescript)
+  * [Next](https://github.com/MultiWar/StoryTime/blob/main/README.md#next)
+  * [DatoCMS](https://github.com/MultiWar/StoryTime/blob/main/README.md#datocms)
+  * [Slate](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate)
+  * [Social Authentication, and why Twitter?](https://github.com/MultiWar/StoryTime/blob/main/README.md#social-authentication-and-why-twitter)
+  * [Chakra UI](https://github.com/MultiWar/StoryTime/blob/main/README.md#chakra-ui)
+## [Português](https://github.com/MultiWar/StoryTime/blob/main/README.md#português)
+* [O que é StoryTime?](https://github.com/MultiWar/StoryTime/blob/main/README.md#o-que-é-storytime)
+* [Por que estas tecnologias?](https://github.com/MultiWar/StoryTime/blob/main/README.md#por-que-estas-tecnologias)
+  * [TypeScript](https://github.com/MultiWar/StoryTime/blob/main/README.md#typescript-1)
+  * [Next](https://github.com/MultiWar/StoryTime/blob/main/README.md#next-1)
+  * [DatoCMS](https://github.com/MultiWar/StoryTime/blob/main/README.md#datocms-1)
+  * [Slate](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate-1)
+  * [Autenticação Social, e por que Twitter?](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate-1)
+  * [Chakra UI](https://github.com/MultiWar/StoryTime/blob/main/README.md#chakra-ui-1)
+## [Screenshots](https://github.com/MultiWar/StoryTime/blob/main/README.md#screenshots)
+* [Home Page / Página Inicial](https://github.com/MultiWar/StoryTime/blob/main/README.md#home-page--página-inicial)
+* [All authors / Todos os autores](https://github.com/MultiWar/StoryTime/blob/main/README.md#all-authors--todos-os-autores)
+* [An author's page / Página de um autor específico](https://github.com/MultiWar/StoryTime/blob/main/README.md#an-authors-page--página-de-um-autor-específico)
+* [A story's page / Página de uma história específica](https://github.com/MultiWar/StoryTime/blob/main/README.md#a-storys-page--página-de-uma-história-específica)
+* [Rich Text Editor](https://github.com/MultiWar/StoryTime/blob/main/README.md#rich-text-editor)
+
 # English
 
 ## What is StoryTime?
