@@ -17,6 +17,7 @@
   * [Slate](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate-1)
   * [Autenticação Social, e por que Twitter?](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate-1)
   * [Chakra UI](https://github.com/MultiWar/StoryTime/blob/main/README.md#chakra-ui-1)
+## [HOTKEYS](https://github.com/MultiWar/StoryTime/blob/main/README.md#hotkeys)
 ## [Screenshots](https://github.com/MultiWar/StoryTime/blob/main/README.md#screenshots)
 * [Home Page / Página Inicial](https://github.com/MultiWar/StoryTime/blob/main/README.md#home-page--página-inicial)
 * [All authors / Todos os autores](https://github.com/MultiWar/StoryTime/blob/main/README.md#all-authors--todos-os-autores)
@@ -70,6 +71,14 @@ Como mencionado anteriormente, eu não queria construir um backend próprio, ent
 
 ### Chakra UI
 Eu queria algo que fosse acelerar meu processo de desenvolver o design, e, sabendo o quão fácil é estender temas no Chakra e contruir em volta dos componentes base, eu tive que usá-lo. Cheguei a tentar criar meu próprio design system, mas isso estava sendo trabalhoso demais e me tomando tempo demais que eu poderia poupar usando Chakra, que, além de já dar tudo que eu estava fazendo pronto, dá tudo melhor, com questões de acessibilidade já feitas, por exemplo, além de muitos componentes utilitários.
+
+# HOTKEYS
+ctrl/command + b: bold / negrito
+ctrl/command + i: italic / itálico
+ctrl/command + u: underline / sublinhado
+ctrl/command + ,: code / código
+ctrl/command + k: strikethrough / cortado no meio
+ctrl/command + m: highlight / destaque
 
 # Screenshots
 
