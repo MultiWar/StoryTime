@@ -18,7 +18,7 @@
   * [Autenticação Social, e por que Twitter?](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate-1)
   * [Chakra UI](https://github.com/MultiWar/StoryTime/blob/main/README.md#chakra-ui-1)
 ## [HOTKEYS](https://github.com/MultiWar/StoryTime/blob/main/README.md#hotkeys-1)
-## [Screenshots](https://github.com/MultiWar/StoryTime/blob/main/README.md#screenshots)
+## [Screenshots](https://github.com/MultiWar/StoryTime/blob/main/README.md#screenshots-1)
 * [Home Page / Página Inicial](https://github.com/MultiWar/StoryTime/blob/main/README.md#home-page--página-inicial)
 * [All authors / Todos os autores](https://github.com/MultiWar/StoryTime/blob/main/README.md#all-authors--todos-os-autores)
 * [An author's page / Página de um autor específico](https://github.com/MultiWar/StoryTime/blob/main/README.md#an-authors-page--página-de-um-autor-específico)
