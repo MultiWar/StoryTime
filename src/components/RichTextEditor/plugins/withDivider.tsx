@@ -5,7 +5,7 @@ export const withDivider = (editor: Editor) => {
     const { insertBreak, isVoid } = editor
 
     editor.isVoid = element => {
-        return element.type === 'divider' ? true : isVoid(element)
+        return element.type === 'thematicBreak' ? true : isVoid(element)
     }
 
     // if current selection is void node, insert a default node below

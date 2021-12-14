@@ -16,7 +16,7 @@ export const Toolbar = () => {
             <MarkButton format='highlight' icon={<FaHighlighter />} ariaLabel='highlight selection' />
             <BlockButton format='heading' icon={<FaHeading />} ariaLabel='turn selection into a Heading' />
             <BlockButton format='blockquote' icon={<FaQuoteLeft />} ariaLabel='turn selection into a quote' />
-            <BlockButton format='divider' icon={<BsDash />} ariaLabel='create divider' />
+            <BlockButton format='thematicBreak' icon={<BsDash />} ariaLabel='create divider' />
         </HStack>
     )
 }

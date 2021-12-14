@@ -24,7 +24,7 @@ export const HOTKEYS = {
 const initialValue: CustomElement[] = [
     {
         type: 'paragraph',
-        children: [{ text: 'A line of text in a paragraph.' }],
+        children: [{ text: '' }],
     }
 ]
 
@@ -42,7 +42,7 @@ export const MyEditor = ({ onChange, value = initialValue }) => {
                 return <HeadingElement {...props} />
             case 'blockquote':
                 return <QuoteElement {...props} />
-            case 'divider':
+            case 'thematicBreak':
                 return <DividerElement {...props} />
             default:
                 return <DefaultElement {...props} />
@@ -69,6 +69,8 @@ export const MyEditor = ({ onChange, value = initialValue }) => {
             borderColor='gray.900'
             borderStyle='solid'
             _focusWithin={{borderColor: 'brand.500', bgColor: 'gray.900'}}
+            maxH='50rem'
+            overflowY='auto'
         >
             <Slate
                 editor={editor}

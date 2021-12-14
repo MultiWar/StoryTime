@@ -9,7 +9,7 @@ export type ParagraphElement = {
 }
 
 export type HeadingElement = {
-  type: 'heading-one',
+  type: 'heading',
   children: CustomText[]
 }
 
@@ -19,7 +19,7 @@ export type QuoteElement = {
 }
 
 export type DividerELement = {
-  type: 'divider',
+  type: 'thematicBreak',
   children: CustomText[]
 }
 

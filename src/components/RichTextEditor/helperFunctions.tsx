@@ -30,7 +30,7 @@ export const toggleBlock = (editor: Editor, format) => {
       type: isActive ? 'paragraph' : format,
     }
 
-    if(format === 'divider') {
+    if(format === 'thematicBreak') {
         addDivider(editor)
         return
     }
@@ -41,7 +41,7 @@ export const toggleBlock = (editor: Editor, format) => {
 export const addDivider = (editor: Editor) => {
     const { selection } = editor
     const divider = [
-        { type: 'divider' as const, children: [{text: ''}] },
+        { type: 'thematicBreak' as const, children: [{text: ''}] },
         { type: 'paragraph' as const, children: [{text: ''}] }
     ]
     
@@ -56,4 +56,22 @@ export const addDivider = (editor: Editor) => {
         Transforms.insertNodes(editor, divider, { select: true })
     }
 
+}
+
+export const slateToDast = (node: any) => {
+    const marks = Object.keys(node).filter(key => node[key] === true)
+
+    if(node?.text) {
+        return {type: 'span', value: node?.text, marks}
+    }
+
+    if(node?.type === 'thematicBreak') {
+        return {type: 'thematicBreak'}
+    }
+
+    if(node?.children && node?.children.length > 0) {
+        return {type: node?.type, children: node?.children.map(c => slateToDast(c))}
+    }
+    
+    return {}
 }
