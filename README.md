@@ -8,6 +8,7 @@
   * [Slate](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate)
   * [Social Authentication, and why Twitter?](https://github.com/MultiWar/StoryTime/blob/main/README.md#social-authentication-and-why-twitter)
   * [Chakra UI](https://github.com/MultiWar/StoryTime/blob/main/README.md#chakra-ui)
+ * [How to see the text editor in action?](https://github.com/MultiWar/StoryTime/blob/main/README.md#how-to-see-the-rich-text-editor-in-action)
 ## [Português](https://github.com/MultiWar/StoryTime/blob/main/README.md#português)
 * [O que é StoryTime?](https://github.com/MultiWar/StoryTime/blob/main/README.md#o-que-é-storytime)
 * [Por que estas tecnologias?](https://github.com/MultiWar/StoryTime/blob/main/README.md#por-que-estas-tecnologias)
@@ -17,6 +18,7 @@
   * [Slate](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate-1)
   * [Autenticação Social, e por que Twitter?](https://github.com/MultiWar/StoryTime/blob/main/README.md#slate-1)
   * [Chakra UI](https://github.com/MultiWar/StoryTime/blob/main/README.md#chakra-ui-1)
+ * [Como testar o editor de texto?](https://github.com/MultiWar/StoryTime/blob/main/README.md#como-testar-o-editor-de-texto)
 ## [HOTKEYS](https://github.com/MultiWar/StoryTime/blob/main/README.md#hotkeys-1)
 ## [Screenshots](https://github.com/MultiWar/StoryTime/blob/main/README.md#screenshots-1)
 * [Home Page / Página Inicial](https://github.com/MultiWar/StoryTime/blob/main/README.md#home-page--página-inicial)
@@ -49,6 +51,9 @@ As I said before, I didn't want to build a backend for this project, but I neede
 ### Chakra UI
 I wanted something to speed up my design, and, knowing how easy it is to extend themes in Chakra and to build around their basic components, I had to use it. I tried creating my own little thing before deciding on it, and it was just too much work for what Chakra had already done, and done better, with built in accessibility concerns and a bunch of helpful components.
 
+## How to see the rich text editor in action?
+Currently it's not reachable anywhere on the UI, but you can go through [this link](https://story-time.vercel.app/chapters/new/123123) to see the editor working. You can play with it as much as you like, but you can't publish any text on the platform.
+
 # Português
 ## O que é StoryTime?
 StoryTime é uma plataforma para escritores amadores (ou não), onde as pessoas poderão compartilhar suas próprias histórias e ver o que outros usuários compartilharam. Está sendo construído com Next e Slate. O CMS escolhido foi o DatoCMS. O login será realizado com autenticação social, provavelmente pelo Twitter. Além disso, planejo incluir internacionalizações, no futuro, para que as interfaces funcionem tanto em português quanto em inglês.
@@ -71,6 +76,9 @@ Como mencionado anteriormente, eu não queria construir um backend próprio, ent
 
 ### Chakra UI
 Eu queria algo que fosse acelerar meu processo de desenvolver o design, e, sabendo o quão fácil é estender temas no Chakra e contruir em volta dos componentes base, eu tive que usá-lo. Cheguei a tentar criar meu próprio design system, mas isso estava sendo trabalhoso demais e me tomando tempo demais que eu poderia poupar usando Chakra, que, além de já dar tudo que eu estava fazendo pronto, dá tudo melhor, com questões de acessibilidade já feitas, por exemplo, além de muitos componentes utilitários.
+
+## Como testar o editor de texto?
+Atualmente, não é possível acessá-lo pela UI, mas é possível usar [este link](https://story-time.vercel.app/chapters/new/123123) para isso. Nesta página, você pode mexer o quanto quiser com o editor, mas nada será publicado na plataforma.
 
 # HOTKEYS
 
